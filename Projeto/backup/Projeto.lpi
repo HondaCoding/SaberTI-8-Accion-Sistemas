@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="Projeto"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="Projeto.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PrincipalF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Principal"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadmodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadModelo"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadUsuarioF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadUsuario"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCategoria"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqcadprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqCadProdF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesqCadProd"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadOrcamento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqorcitem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqOrcItemF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesqOrcItem"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesqCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relClientes"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqorcitemprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqOrcItemProdF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesqOrcItemProd"/>
+      </Unit>
+      <Unit>
+        <Filename Value="sobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SobreF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Sobre"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relProdutosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relProdutos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relcategorias.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relCategoriasF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relCategorias"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relorcamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relOrcamentosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relOrcamentos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telalogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TelaLoginF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TelaLogin"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="Projeto"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

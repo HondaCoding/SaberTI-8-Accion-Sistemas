@@ -1,0 +1,23 @@
+object TelaLoginF: TTelaLoginF
+  Left = 531
+  Height = 316
+  Top = 173
+  Width = 438
+  Caption = 'Login Saber TI 8 - Accion Sistemas'
+  ClientHeight = 316
+  ClientWidth = 438
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 316
+    Top = 0
+    Width = 438
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 16102802
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+  end
+end
