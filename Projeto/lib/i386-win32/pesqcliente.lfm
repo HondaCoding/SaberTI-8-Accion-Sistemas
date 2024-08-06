@@ -1,0 +1,119 @@
+object PesqClienteF: TPesqClienteF
+  Left = 491
+  Height = 336
+  Top = 200
+  Width = 444
+  Caption = 'Pesquisa de Produtos'
+  ClientHeight = 336
+  ClientWidth = 444
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 71
+    Top = 0
+    Width = 444
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 71
+    ClientWidth = 444
+    Color = 16102802
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Left = 280
+      Height = 22
+      Top = 25
+      Width = 23
+      Glyph.Data = {
+        36030000424D3803000000000000360000002800000010000000100000000100
+        18000000000000000000120B0000120B00000000000000000000646365314B62
+        AC7D7EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FF5084B20F6FE1325F8CB87E7AFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF32A0FE37A1FF
+        106FE2325F8BB67D79FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FF37A4FE379FFF0E6DDE355F89BB7F79FF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        37A4FE359EFF0F6FDE35608BA67B7FFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF38A5FE329DFF156DCE444F5BFF
+        00FF925D5AB48C80C9A391C28F88FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FF3BABFFA1CAE78C7775A38372EBE0B8FEFCCFFEFCCEFCFBCCE3CF
+        B1C0998CFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFBDA4A4CEA58FFF
+        EDB2FFFCCAFFFFCFFFFFCFFFFFD5FFFFEAF3EBE5A0746FFF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FFB67F76F4D9A1F6D095FCF4C2FFFFCFFFFFD8FFFFEEFFFF
+        FAFFFFFFD5C2ACFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFD0A792FBDC9AEE
+        B87FFBF0BDFFFFD0FFFFDCFFFFF7FFFFFAFFFFE6EEEAC2B7847EFF00FFFF00FF
+        FF00FFFF00FFFF00FFDCB79AFAD796EAA76CF7DAA3FFFFCEFFFFD4FFFFE1FFFF
+        E3FFFFD7F8F6CBB69782FF00FFFF00FFFF00FFFF00FFFF00FFD5AF96FEE2A1EA
+        A96AEFBD80FAE9B4FFFFD0FFFFD3FFFFD1FFFFD1F3EEC5B88B80FF00FFFF00FF
+        FF00FFFF00FFFF00FFBB8980FCEBB1F8E2B5F0C690F0C286F7DCA5FEF3C1FEF8
+        C6FFFFCFDDCEA9FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFD3B499FF
+        FFFFFFF4E2EFBD80EBAB6FF0C086FBDEA3FCF3B8AC8676FF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FFFF00FFC6ADA7F3EBD1FFEEAFFCDE9DFEE2A1F0D4
+        A4C29886FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+        00FFBB987EC19983D3AD93D1A592FF00FFFF00FFFF00FFFF00FF
+      }
+      OnClick = SpeedButton1Click
+    end
+    object Label1: TLabel
+      Left = 36
+      Height = 17
+      Top = 28
+      Width = 61
+      Caption = 'Categoria:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtBuscar: TEdit
+      Left = 105
+      Height = 23
+      Top = 25
+      Width = 164
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 265
+    Top = 71
+    Width = 444
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 25
+        FieldName = 'clienteid'
+      end    
+      item
+        Title.Caption = 'TIPO'
+        FieldName = 'tipo_cliente'
+      end    
+      item
+        Title.Caption = 'CPF / CNPJ'
+        Width = 120
+        FieldName = 'cpf_cnpj_cliente'
+      end    
+      item
+        Title.Caption = 'NOME CLIENTE'
+        Width = 200
+        FieldName = 'nome_cliente'
+      end>
+    DataSource = dsCliente
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object dsCliente: TDataSource
+    DataSet = dmF.qryCliente
+    Left = 264
+    Top = 226
+  end
+end
