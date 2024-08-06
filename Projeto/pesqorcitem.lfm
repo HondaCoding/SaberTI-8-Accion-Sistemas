@@ -1,0 +1,191 @@
+object PesqOrcItemF: TPesqOrcItemF
+  Left = 529
+  Height = 242
+  Top = 256
+  Width = 380
+  Caption = 'Inserir Item'
+  ClientHeight = 242
+  ClientWidth = 380
+  Position = poScreenCenter
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 242
+    Top = 0
+    Width = 380
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 242
+    ClientWidth = 380
+    Color = 16102802
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 14
+      Height = 17
+      Top = 17
+      Width = 50
+      Caption = 'Produto'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 14
+      Height = 17
+      Top = 73
+      Width = 131
+      Caption = 'Descrição do produto'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 14
+      Height = 17
+      Top = 140
+      Width = 33
+      Caption = 'Qtde.'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 167
+      Height = 17
+      Top = 140
+      Width = 50
+      Caption = 'Vlr. Unit.'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 315
+      Height = 17
+      Top = 140
+      Width = 51
+      Caption = 'Vlr. Total'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtProduto: TDBEdit
+      Left = 14
+      Height = 23
+      Top = 36
+      Width = 80
+      DataField = 'produtoid'
+      DataSource = dsPesqOrcItem
+      Alignment = taRightJustify
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object edtDescProduto: TDBEdit
+      Left = 14
+      Height = 23
+      Top = 93
+      Width = 352
+      DataField = 'produtodesc'
+      DataSource = dsPesqOrcItem
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 1
+    end
+    object edtQtde: TDBEdit
+      Left = 14
+      Height = 23
+      Top = 157
+      Width = 65
+      DataField = 'qt_produto'
+      DataSource = dsPesqOrcItem
+      Alignment = taRightJustify
+      MaxLength = 0
+      TabOrder = 2
+      OnExit = edtQtdeExit
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 103
+      Height = 22
+      Top = 36
+      Width = 23
+      Caption = '...'
+      OnClick = SpeedButton1Click
+    end
+    object btnInserir: TBitBtn
+      Left = 194
+      Height = 30
+      Top = 198
+      Width = 75
+      Caption = 'Inserir Item'
+      OnClick = btnInserirClick
+      TabOrder = 3
+    end
+    object btnCancelar: TBitBtn
+      Left = 294
+      Height = 30
+      Top = 198
+      Width = 66
+      Caption = 'Cancelar'
+      OnClick = btnCancelarClick
+      TabOrder = 4
+    end
+  end
+  object edtVlrUnit: TDBEdit
+    Left = 109
+    Height = 23
+    Top = 158
+    Width = 106
+    DataField = 'vl_unitario'
+    DataSource = dsPesqOrcItem
+    ReadOnly = True
+    Alignment = taRightJustify
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object edtVlrTotal: TDBEdit
+    Left = 261
+    Height = 23
+    Top = 158
+    Width = 106
+    DataField = 'vl_total'
+    DataSource = dsPesqOrcItem
+    Alignment = taRightJustify
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object dsPesqOrcItem: TDataSource
+    DataSet = dmF.qryOrcamentoItem
+    Left = 296
+    Top = 28
+  end
+end

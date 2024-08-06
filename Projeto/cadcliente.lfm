@@ -1,0 +1,252 @@
+inherited CadClienteF: TCadClienteF
+  Left = 269
+  Top = 117
+  Width = 874
+  Caption = 'Tela de Cliente'
+  ClientWidth = 874
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  inherited PageControl1: TPageControl
+    Width = 874
+    OnChange = PageControl1Change
+    inherited tbPesquisa: TTabSheet
+      ClientWidth = 866
+      inherited Panel1: TPanel
+        Width = 866
+        ClientWidth = 866
+        inherited btnBuscar: TButton
+          Left = 531
+          OnClick = btnBuscarClick
+        end
+        inherited Label1: TLabel
+          Width = 49
+          Caption = 'Pesquisa:'
+        end
+        object edtBuscar: TEdit[2]
+          Left = 109
+          Height = 23
+          Top = 19
+          Width = 286
+          TabOrder = 1
+          TextHint = 'selecione a busca por CPF ou Nome...'
+        end
+        object radioBtnCPF: TRadioButton[3]
+          Left = 408
+          Height = 19
+          Top = 23
+          Width = 39
+          Caption = 'CPF'
+          TabOrder = 2
+        end
+        object radioBtnNome: TRadioButton[4]
+          Left = 465
+          Height = 19
+          Top = 23
+          Width = 51
+          Caption = 'Nome'
+          TabOrder = 3
+        end
+        object SpeedButton1: TSpeedButton[5]
+          Left = 631
+          Height = 22
+          Top = 22
+          Width = 23
+          Glyph.Data = {
+            E6000000424DE60000000000000076000000280000000E0000000E0000000100
+            0400000000007000000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+            DD00DDDDD4444DDDDD00DDD44444444DDD00DD444DDDD444DD00DD44DDDDDD44
+            DD00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD4
+            4D00DD44DDDD4D44DD00DD44DDDD4444DD00DDDDDDDD444DDD00DDDDDDDD4444
+            DD00DDDDDDDDDDDDDD00
+          }
+          OnClick = SpeedButton1Click
+        end
+      end
+      inherited Panel2: TPanel
+        Width = 866
+        ClientWidth = 866
+        inherited btnNovo: TButton
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TButton
+          Left = 749
+          OnClick = btnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 866
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'clienteid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'TIPO'
+            FieldName = 'tipo_cliente'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'CPF / CNPJ'
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'NOME CLIENTE'
+            Width = 500
+            FieldName = 'nome_cliente'
+          end>
+        DataSource = dsPrincipal
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited tbCadastro: TTabSheet
+      ClientWidth = 866
+      inherited Panel3: TPanel
+        Width = 866
+        ClientWidth = 866
+        inherited btnGravar: TButton
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TButton
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TButton
+          Left = 751
+          OnClick = btnCancelarClick
+        end
+      end
+      object Label5: TLabel[1]
+        Left = 125
+        Height = 15
+        Top = 76
+        Width = 36
+        Caption = 'Nome:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit2: TDBEdit[2]
+        Left = 178
+        Height = 23
+        Top = 68
+        Width = 216
+        DataField = 'nome_cliente'
+        DataSource = dsPrincipal
+        MaxLength = 100
+        TabOrder = 1
+      end
+      object Label2: TLabel[3]
+        Left = 428
+        Height = 15
+        Top = 76
+        Width = 71
+        Caption = 'ID do cliente:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit1: TDBEdit[4]
+        Left = 516
+        Height = 23
+        Top = 68
+        Width = 84
+        DataField = 'clienteid'
+        DataSource = dsPrincipal
+        Alignment = taRightJustify
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEdit3: TDBEdit[5]
+        Left = 516
+        Height = 23
+        Top = 128
+        Width = 42
+        DataField = 'tipo_cliente'
+        DataSource = dsPrincipal
+        MaxLength = 1
+        TabOrder = 3
+      end
+      object Label3: TLabel[6]
+        Left = 418
+        Height = 15
+        Top = 136
+        Width = 81
+        Caption = 'Tipo de cliente:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit4: TDBEdit[7]
+        Left = 181
+        Height = 23
+        Top = 128
+        Width = 184
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = dsPrincipal
+        MaxLength = 18
+        TabOrder = 2
+      end
+      object Label4: TLabel[8]
+        Left = 94
+        Height = 15
+        Top = 136
+        Width = 67
+        Caption = 'Documento:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBNavigator1: TDBNavigator[9]
+        Left = 239
+        Height = 25
+        Top = 204
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        Color = clGradientActiveCaption
+        DataSource = dsPrincipal
+        Options = []
+        ParentColor = False
+        TabOrder = 5
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      end
+    end
+  end
+  inherited dsPrincipal: TDataSource
+    DataSet = dmF.qryCliente
+    Left = 1082
+    Top = 46
+  end
+end

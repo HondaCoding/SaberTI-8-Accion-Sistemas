@@ -1,0 +1,465 @@
+inherited CadOrcamentoF: TCadOrcamentoF
+  Left = 73
+  Height = 604
+  Top = 71
+  Width = 1254
+  Caption = 'Tela de Orçamento'
+  ClientHeight = 604
+  ClientWidth = 1254
+  OnShow = FormShow
+  Position = poScreenCenter
+  inherited PageControl1: TPageControl
+    Height = 604
+    Width = 1254
+    inherited tbPesquisa: TTabSheet
+      ClientHeight = 576
+      ClientWidth = 1246
+      inherited Panel1: TPanel
+        Width = 1246
+        ClientWidth = 1246
+        inherited btnBuscar: TButton
+          Left = 279
+          OnClick = btnBuscarClick
+        end
+        inherited Label1: TLabel
+          Left = 41
+          Width = 49
+          Caption = 'Pesquisa:'
+        end
+        object edtBuscar: TEdit[2]
+          Left = 98
+          Height = 23
+          Top = 19
+          Width = 149
+          TabOrder = 1
+        end
+        object SpeedButton2: TSpeedButton[3]
+          Left = 388
+          Height = 22
+          Top = 20
+          Width = 23
+          Glyph.Data = {
+            E6000000424DE60000000000000076000000280000000E0000000E0000000100
+            0400000000007000000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+            DD00DDDDD4444DDDDD00DDD44444444DDD00DD444DDDD444DD00DD44DDDDDD44
+            DD00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD4
+            4D00DD44DDDD4D44DD00DD44DDDD4444DD00DDDDDDDD444DDD00DDDDDDDD4444
+            DD00DDDDDDDDDDDDDD00
+          }
+          OnClick = SpeedButton2Click
+        end
+      end
+      inherited Panel2: TPanel
+        Top = 504
+        Width = 1246
+        ClientWidth = 1246
+        inherited btnNovo: TButton
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TButton
+          Left = 1129
+          OnClick = btnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 440
+        Width = 1246
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'ID ORÇAMENTO'
+            Width = 100
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'ID CLIENTE'
+            Width = 100
+            FieldName = 'clienteid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'DATA DO ORÇAMENTO'
+            Width = 160
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'VALIDADE ORÇAMENTO'
+            Width = 160
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'VALOR TOTAL ORÇAMENTO'
+            Width = 170
+            FieldName = 'vl_total_orcamento'
+            DisplayFormat = '###,##0.00'
+          end>
+        DataSource = dsPrincipal
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited tbCadastro: TTabSheet
+      ClientHeight = 576
+      ClientWidth = 1246
+      inherited Panel3: TPanel
+        Top = 502
+        Width = 1246
+        ClientWidth = 1246
+        inherited btnGravar: TButton
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TButton
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TButton
+          Left = 1131
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel4: TPanel[1]
+        Left = 0
+        Height = 131
+        Top = 0
+        Width = 1246
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 131
+        ClientWidth = 1246
+        Color = 16102802
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 1
+        object BitBtn1: TBitBtn
+          Left = 900
+          Height = 30
+          Top = 89
+          Width = 115
+          Caption = 'Adicionar Item'
+          Glyph.Data = {
+            DE000000424DDE0000000000000076000000280000000D0000000D0000000100
+            0400000000006800000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+            700077777777777770007777700077777000777770C077777000777770C07777
+            7000770000C000077000770CCCCCCC077000770000C000077000777770C07777
+            7000777770C07777700077777000777770007777777777777000777777777777
+            7000
+          }
+          OnClick = BitBtn1Click
+          TabOrder = 0
+        end
+        object edtID: TDBEdit
+          Left = 70
+          Height = 23
+          Top = 37
+          Width = 80
+          DataField = 'orcamentoid'
+          DataSource = dsPrincipal
+          Alignment = taRightJustify
+          Enabled = False
+          MaxLength = 0
+          TabOrder = 1
+        end
+        object edtCliente: TDBEdit
+          Left = 70
+          Height = 23
+          Top = 97
+          Width = 80
+          DataField = 'clienteid'
+          DataSource = dsPrincipal
+          Alignment = taRightJustify
+          Enabled = False
+          MaxLength = 0
+          TabOrder = 2
+        end
+        object edtDtOrcamento: TDBEdit
+          Left = 259
+          Height = 23
+          Top = 37
+          Width = 106
+          DataField = 'dt_orcamento'
+          DataSource = dsPrincipal
+          MaxLength = 0
+          TabOrder = 3
+        end
+        object edtTotalOrcamento: TDBEdit
+          Left = 601
+          Height = 33
+          Top = 63
+          Width = 203
+          DataField = 'vl_total_orcamento'
+          DataSource = dsPrincipal
+          Alignment = taRightJustify
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -19
+          Font.Name = 'Segoe UI'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          MaxLength = 0
+          ParentFont = False
+          TabOrder = 4
+        end
+        object Label2: TLabel
+          Left = 601
+          Height = 30
+          Top = 33
+          Width = 202
+          Caption = 'TOTAL ORÇAMENTO'
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -21
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 70
+          Height = 15
+          Top = 22
+          Width = 14
+          Caption = 'Id.'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 70
+          Height = 15
+          Top = 81
+          Width = 39
+          Caption = 'Cliente'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 259
+          Height = 15
+          Top = 22
+          Width = 83
+          Caption = 'Dt. Orçamento'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 421
+          Height = 15
+          Top = 22
+          Width = 66
+          Caption = 'Dt. Validade'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtValidade: TDBEdit
+          Left = 421
+          Height = 23
+          Top = 37
+          Width = 106
+          DataField = 'dt_validade_orcamento'
+          DataSource = dsPrincipal
+          MaxLength = 0
+          TabOrder = 5
+        end
+        object lblCliente: TLabel
+          Left = 233
+          Height = 25
+          Top = 94
+          Width = 15
+          Caption = '...'
+          Color = clWindow
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clNavy
+          Font.Height = -19
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          Transparent = False
+          Visible = False
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 157
+          Height = 22
+          Top = 97
+          Width = 23
+          Glyph.Data = {
+            36050000424D360500000000000036040000280000000E000000100000000100
+            08000000000000010000CA0E0000C30E00000001000000000000000000003300
+            00006600000099000000CC000000FF0000000033000033330000663300009933
+            0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+            000000990000339900006699000099990000CC990000FF99000000CC000033CC
+            000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+            0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+            330000333300333333006633330099333300CC333300FF333300006633003366
+            33006666330099663300CC663300FF6633000099330033993300669933009999
+            3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+            330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+            66006600660099006600CC006600FF0066000033660033336600663366009933
+            6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+            660000996600339966006699660099996600CC996600FF99660000CC660033CC
+            660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+            6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+            990000339900333399006633990099339900CC339900FF339900006699003366
+            99006666990099669900CC669900FF6699000099990033999900669999009999
+            9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+            990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+            CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+            CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+            CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+            CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+            CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+            FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+            FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+            FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+            FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000ACACACACACAC
+            ACACACAC0000ACAC0000ACACACACACACACACAC02230500AC0000ACAC00000000
+            00000223050500000000ACAC56ACACACAC02230505ACAC000000ACAC56D7D7D7
+            02230505ACD7AC000000ACAC56000056AC0505ACD7D7AC000000AC56AC23AC00
+            5656ACD7D7D7AC00000056D723AC23AC00ACD7D7D7D7AC0000005623D723AC23
+            00ACD7D7D7D7AC00000056D723D723AC00ACD7D7D7D7AC000000AC56D723D700
+            ACD7D7D7D7D7AC000000ACAC565600ACD7D7D7D7D7D7AC000000ACAC56D7D7D7
+            D7D7D7D700000000FFFFACAC56D7D7D7D7D7D7D7ACD756AC0000ACAC56D7D7D7
+            D7D7D7D7AC56ACAC0000ACAC565656565656565656ACACAC0000
+          }
+          OnClick = SpeedButton1Click
+        end
+        object BitBtn2: TBitBtn
+          Left = 1045
+          Height = 30
+          Top = 90
+          Width = 115
+          Caption = 'Excluir Item'
+          Glyph.Data = {
+            66010000424D6601000000000000760000002800000014000000140000000100
+            040000000000F000000000000000000000001000000010000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+            8888888800008888888888888888889800008898888888888888898800008899
+            88777777777798880000889990000000000998880000888990BFFFBFFF998888
+            0000888899FCCCCCCF97888800008888999FBFFFB9978888000088888999CCC9
+            990788880000888880999FB99F0788880000888880FC9999CF07888800008888
+            80FF9999BF0788880000888880FC9999000788880000888880B99F099F078888
+            0000888880999F099998888800008888999FBF0F089988880000889999000000
+            8889988800008899988888888888898800008888888888888888889800008888
+            88888888888888880000
+          }
+          OnClick = BitBtn2Click
+          TabOrder = 6
+        end
+      end
+      object DBGrid2: TDBGrid[2]
+        Left = 0
+        Height = 371
+        Top = 131
+        Width = 1246
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'ID ORÇAMENTO'
+            Width = 100
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'ITEM'
+            Width = 50
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'ID PRODUTO'
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Alignment = taCenter
+            Title.Caption = 'DESCRIÇÃO DO PRODUTO'
+            Width = 240
+            FieldName = 'produtodesc'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'QTDE.'
+            Width = 60
+            FieldName = 'qt_produto'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'VALOR UNIT.'
+            Width = 90
+            FieldName = 'vl_unitario'
+            DisplayFormat = '###,##0.00'
+          end        
+          item
+            Alignment = taRightJustify
+            Title.Alignment = taCenter
+            Title.Caption = 'VALOR TOTAL'
+            FieldName = 'vl_total'
+            DisplayFormat = '###,##0.00'
+          end>
+        DataSource = dsOrcamentoItem
+        TabOrder = 2
+      end
+    end
+  end
+  inherited dsPrincipal: TDataSource
+    DataSet = dmF.qryOrcamento
+    Left = 800
+    Top = 40
+  end
+  object dsOrcamentoItem: TDataSource[2]
+    DataSet = dmF.qryOrcamentoItem
+    Left = 936
+    Top = 40
+  end
+end

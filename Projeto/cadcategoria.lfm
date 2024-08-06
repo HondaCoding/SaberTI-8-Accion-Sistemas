@@ -1,0 +1,202 @@
+inherited CadCategoriaF: TCadCategoriaF
+  Left = 249
+  Top = 178
+  Width = 1108
+  Caption = 'Tela de Categoria'
+  ClientWidth = 1108
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  inherited PageControl1: TPageControl
+    Width = 1108
+    inherited tbPesquisa: TTabSheet
+      ClientWidth = 1100
+      inherited Panel1: TPanel
+        Width = 1100
+        ClientWidth = 1100
+        inherited btnBuscar: TButton
+          Left = 467
+          Top = 20
+          OnClick = btnBuscarClick
+        end
+        inherited Label1: TLabel
+          Left = 26
+          Width = 49
+          Caption = 'Pesquisa:'
+        end
+        object radioBtnId: TRadioButton[2]
+          Left = 314
+          Height = 19
+          Top = 23
+          Width = 29
+          Caption = 'ID'
+          TabOrder = 1
+        end
+        object radioBtnDesc: TRadioButton[3]
+          Left = 365
+          Height = 19
+          Top = 23
+          Width = 81
+          Caption = 'DESCRIÇÃO'
+          TabOrder = 2
+        end
+        object edtBuscar: TEdit[4]
+          Left = 82
+          Height = 23
+          Top = 19
+          Width = 210
+          TabOrder = 3
+          TextHint = 'selecione a busca por ID ou descriç...'
+        end
+        object SpeedButton1: TSpeedButton[5]
+          Left = 570
+          Height = 22
+          Top = 23
+          Width = 23
+          Glyph.Data = {
+            E6000000424DE60000000000000076000000280000000E0000000E0000000100
+            0400000000007000000000000000000000001000000010000000000000000000
+            BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+            DD00DDDDD4444DDDDD00DDD44444444DDD00DD444DDDD444DD00DD44DDDDDD44
+            DD00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD44D00D44DDDDDDDD4
+            4D00DD44DDDD4D44DD00DD44DDDD4444DD00DDDDDDDD444DDD00DDDDDDDD4444
+            DD00DDDDDDDDDDDDDD00
+          }
+          OnClick = SpeedButton1Click
+        end
+      end
+      inherited Panel2: TPanel
+        Width = 1100
+        BevelOuter = bvRaised
+        ClientWidth = 1100
+        inherited btnNovo: TButton
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TButton
+          Left = 983
+          OnClick = btnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Width = 1100
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'DESCRIÇÃO'
+            Width = 200
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsPrincipal
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited tbCadastro: TTabSheet
+      ClientWidth = 1100
+      inherited Panel3: TPanel
+        Width = 1100
+        ClientWidth = 1100
+        inherited btnGravar: TButton
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TButton
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TButton
+          Left = 985
+          OnClick = btnCancelarClick
+        end
+        object btnEditar: TButton[3]
+          Left = 307
+          Height = 25
+          Top = 20
+          Width = 75
+          Caption = 'Editar'
+          TabOrder = 3
+          OnClick = btnEditarClick
+        end
+      end
+      object Label3: TLabel[1]
+        Left = 108
+        Height = 15
+        Top = 108
+        Width = 55
+        Caption = 'Descrição:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit2: TDBEdit[2]
+        Left = 188
+        Height = 23
+        Top = 102
+        Width = 181
+        DataField = 'ds_categoria_produto'
+        DataSource = dsPrincipal
+        Alignment = taCenter
+        MaxLength = 50
+        TabOrder = 1
+      end
+      object Label2: TLabel[3]
+        Left = 85
+        Height = 15
+        Top = 64
+        Width = 79
+        Caption = 'ID do produto:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBEdit1: TDBEdit[4]
+        Left = 189
+        Height = 23
+        Top = 56
+        Width = 55
+        DataField = 'categoriaprodutoid'
+        DataSource = dsPrincipal
+        Alignment = taCenter
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBNavigator1: TDBNavigator[5]
+        Left = 145
+        Height = 25
+        Top = 183
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        Color = clDefault
+        DataSource = dsPrincipal
+        Options = []
+        ParentColor = False
+        TabOrder = 3
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      end
+    end
+  end
+  inherited dsPrincipal: TDataSource
+    DataSet = dmF.qryCategoria
+  end
+end
